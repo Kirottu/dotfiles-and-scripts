@@ -1,0 +1,3 @@
+#!/bin/bash
+
+date +"%A,%e of %B %H:%M"
