@@ -1,0 +1,10 @@
+#!/bin/bash
+
+CURRENT_PERCENTAGE=$(cat /sys/class/power_supply/BAT0/capacity)
+STATUS=$(cat /sys/class/power_supply/BAT0/status)
+
+if [ 15 -gt "$CURRENT_PERCENTAGE" ] && [ "$STATUS" != "Charging" ]; then
+	notify-send -u critical "PLUG IN THE CHARGER YOU TWAT!" "BATTERY UNDER 15%, PLUG CHARGER IN NOW"
+fi
+
+echo "BAT: ${CURRENT_PERCENTAGE}%"
