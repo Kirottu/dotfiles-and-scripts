@@ -22,8 +22,8 @@ done
 #Image paths
 if [ "$arg_image" ]; then
     BKG_IMG="$arg_image"  # Passed image
-elif [ -f "/home/kirottu/.config/wallpaper.jpg" ]; then
-    BKG_IMG="/home/kirottu/.config/wallpaper.jpg"  # Default image
+elif [ -f "/home/kirottu/.config/terminal_cafe_bg.png" ]; then
+    BKG_IMG="/home/kirottu/.config/terminal_cafe_bg.png"  # Default image
 else
     BKG_IMG="$(dirname "$BASH_SOURCE")/img/background.png"  # Fallback to current folder
 fi
