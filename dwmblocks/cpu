@@ -2,4 +2,4 @@
 
 echo "CPU: $(top -bn1 | grep "Cpu(s)" | \
            sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | \
-	   awk '{print 100 - $1"%"}')/$(sensors | awk '/Tdie/ {print $2}')"
+	   awk '{printf ("%.2f\n", 100 - $1"%")}')/$(sensors | tail -5 | awk '/temp1/ {print $2}')"
