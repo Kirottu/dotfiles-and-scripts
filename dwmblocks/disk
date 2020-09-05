@@ -1,3 +1,0 @@
-#!/bin/bash
-
-echo "HDD: $(df -h /dev/sda1 | grep /dev/sda1 | awk '{print $3 "/" $2 " (" $4 ")"}')"
