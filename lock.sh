@@ -22,8 +22,8 @@ done
 #Image paths
 if [ "$arg_image" ]; then
     BKG_IMG="$arg_image"  # Passed image
-elif [ -f "/home/kirottu/.config/terminal_cafe_bg.png" ]; then
-    BKG_IMG="/home/kirottu/.config/terminal_cafe_bg.png"  # Default image
+elif [ -f "$(sed -n -e 's/^.*file=//p' $HOME/.config/nitrogen/bg-saved.cfg | tail -1)" ]; then
+  BKG_IMG="$(sed -n -e 's/^.*file=//p' $HOME/.config/nitrogen/bg-saved.cfg | tail -1)"  # Default image
 else
     BKG_IMG="$(dirname "$BASH_SOURCE")/img/background.png"  # Fallback to current folder
 fi

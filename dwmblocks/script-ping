@@ -1,0 +1,5 @@
+#!/bin/bash
+
+SERVER=1.1.1.1
+
+echo "PING: $(ping -c 1 $SERVER | grep "64 bytes" | awk -F '=' '{print $4}')"
