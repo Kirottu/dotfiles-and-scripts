@@ -1,0 +1,8 @@
+#!/bin/bash
+LANG="$1"
+shift
+
+TO_TRANSLATE="$@"
+TRANSLATION=$(trans -no-ansi :$LANG "$TO_TRANSLATE")
+
+notify-send -u normal "Translation finished" "$TRANSLATION"
